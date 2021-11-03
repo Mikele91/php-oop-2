@@ -45,4 +45,10 @@ class Cliente {
         // var_dump($_prodotto); die();
             $this->totale += $_prodotto->getPrezzo();
     }
+    public function setName($_name){
+        if(!is_string($_name)){
+            throw new Exception("Inserisci nome corretto");
+        }
+        $this->name= $_name;
+    }
 }

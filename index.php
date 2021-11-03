@@ -11,15 +11,23 @@ Gestite eventuali eccezioni che si possono verificare (es: carta di credito scad
 <?php
 require_once __DIR__ . "/classes/utente.php";
 require_once __DIR__ . "/classes/prodotto.php";
-require_once __DIR__ . "/classes/carrello.php";
-
+require_once __DIR__ . "/classes/utenteP.php";
 
 $michele = new Cliente ("michele", 1, "michele@hotmail.it");
+$simone = new Premium("simone" , 2, "simone@live.come",14);
+var_dump($simone);
+try{
+    echo $michele->setName($michele->getName());
+
+}catch(Exception $e){
+    echo "Errore: " . $e->getMessage();
+}
 $elm1 = new Prodotto("biscotti", "a1", 20);
 $michele->addCarello($elm1);
 $michele->addCarello($elm1);
 
 $michele->addCarello($elm1);
+
 
 // $spesa = [$elm1,$elm2,$elm3];
 var_dump($michele);
