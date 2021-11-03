@@ -15,9 +15,16 @@ require_once __DIR__ . "/classes/carrello.php";
 
 
 $michele = new Cliente ("michele", 1, "michele@hotmail.it");
+$elm1 = new Prodotto("biscotti", "a1", 20);
+$michele->addCarello($elm1);
+$michele->addCarello($elm1);
 
+$michele->addCarello($elm1);
 
+// $spesa = [$elm1,$elm2,$elm3];
 var_dump($michele);
+
+// var_dump($michele);
 
 echo $michele->getName();
 

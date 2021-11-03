@@ -4,6 +4,8 @@ class Cliente {
     protected $id;
     protected $email;
     protected $indirizzo;
+    protected $carello =[];
+    protected $totale = 0;
 
     function __construct($_name, $_id, $_email, $_indirizzo= NUll)
     {
@@ -11,6 +13,7 @@ class Cliente {
         $this->id = $_id;
         $this->email = $_email;
         $this->indirizzo = $_indirizzo;
+
     }
 
     public function getName()
@@ -31,5 +34,15 @@ class Cliente {
     {
         return $this->indirizzo;
     }
-}
+    public function getCarello()
+    {
+        return $this->carello;
+    }
 
+    
+    public function addCarello($_prodotto){
+        $this->carello[]= $_prodotto;
+        // var_dump($_prodotto); die();
+            $this->totale += $_prodotto->getPrezzo();
+    }
+}

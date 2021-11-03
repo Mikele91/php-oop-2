@@ -9,7 +9,7 @@ class Prodotto {
     {
         $this->name = $_name;
         $this->id = $_id;
-        $this->id = $_prezzo;
+        $this->prezzo = $_prezzo;
 
 
     }
@@ -22,7 +22,7 @@ class Prodotto {
 
 
     public function setName($_name){
-        $this->name[] = $_name;
+        $this->name = $_name;
 
     }
     
@@ -35,7 +35,7 @@ class Prodotto {
 
     public function setid($_id)
     {
-        $this->id[] = $_id;
+        $this->id = $_id;
 
     }
     // Prodotto prezzo 
@@ -47,7 +47,7 @@ class Prodotto {
 
     public function setPrezzo($_prezzo)
     {
-        $this->id[] = $_prezzo;
+        $this->prezzo = $_prezzo;
 
     }
     
