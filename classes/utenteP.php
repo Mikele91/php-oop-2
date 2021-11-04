@@ -1,10 +1,7 @@
 <?php
 class Premium  extends Cliente{
 
-
-
     protected $punti;
-
 
 function __construct($_name, $_id, $_email ,$_punti)
 {

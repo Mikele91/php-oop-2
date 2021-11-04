@@ -1,4 +1,7 @@
 <?php
+
+require_once __DIR__ . '/creditCard.php';
+
 class Cliente {
     protected $name;
     protected $id;
@@ -6,6 +9,8 @@ class Cliente {
     protected $indirizzo;
     protected $carello =[];
     protected $totale = 0;
+    protected $creditCards = [];  
+
 
     function __construct($_name, $_id, $_email, $_indirizzo= NUll)
     {
@@ -50,5 +55,9 @@ class Cliente {
             throw new Exception("Inserisci nome corretto");
         }
         $this->name= $_name;
+    }
+     public function setCard($_creditCards)
+    {
+        $this->creditCards= $_creditCards;
     }
 }
